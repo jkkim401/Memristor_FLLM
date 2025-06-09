@@ -91,10 +91,10 @@ This project implements a federated learning system to fine-tune a Large Languag
     python main.py --num_clients 16 --num_rounds 10 --batch_size 8
     ```
     *   Adjust arguments as needed:
-        *   `--num_clients`: Number of federated clients (default: 16).
-        *   `--num_rounds`: Number of federated learning rounds (default: 5).
-        *   `--batch_size`: Batch size used by clients during training (default: 8).
-        *   `--data_dir`: Path to the directory containing MIMIC CSV files (default: `/home/ubuntu/federated_llm/data`).
+        *   `--num_clients`: Number of federated clients.
+        *   `--num_rounds`: Number of federated learning rounds.
+        *   `--batch_size`: Batch size used by clients during training.
+        *   `--data_dir`: Path to the directory containing MIMIC CSV files.
 
 ## Code Overview
 
@@ -105,13 +105,4 @@ This project implements a federated learning system to fine-tune a Large Languag
 *   **`fl_client.py`:** Defines the Flower client using LoRA for efficient fine-tuning.
 *   **`fl_server.py`:** Defines the Flower server, FedAvg aggregation strategy, and simulation setup.
 *   **`main.py`:** Entry point script to start the federated learning simulation.
-
-## Notes
-
-*   The implementation assumes PyTorch.
-*   All code includes English comments.
-*   Files exceeding 200 lines were not strictly necessary based on current implementation but the structure allows for easy expansion.
-*   MIMIC-IV data access is crucial and must be handled by the user.
-*   The current implementation uses a simplified model configuration in `fl_server.py` for potentially faster simulation. Adjust `model_config` there for larger models.
-*   Evaluation currently focuses on training/validation loss. Further metrics (e.g., perplexity, task-specific accuracy) can be added.
 
