@@ -1,0 +1,15 @@
+torch==1.13.1
+torchaudio==0.13.1
+transformers==4.26.1
+peft==0.3.0
+datasets==2.10.1
+flwr[simulation]==1.2.0
+bitsandbytes==0.37.2
+accelerate==0.16.0
+scikit-learn==1.2.2
+pandas==1.5.3
+tqdm==4.65.0
+numpy==1.23.5
+flash-attn==1.0.5
+dataclasses; python_version < '3.7'
+git+https://github.com/huggingface/transformers.git@096f25ae1f501a084d8ff2dcaf25fbc2bd60eba4
